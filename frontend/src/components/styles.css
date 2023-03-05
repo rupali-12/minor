@@ -1,0 +1,39 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.bell-notification{
+  color: black;
+  position: relative;
+  animation:  bell 1s linear infinite alternate-reverse;
+  /* @keyframes bell {
+    0%{
+      transform: rotate(-20deg);
+    }
+    100%{
+      transform: rotate(20deg);
+    } */
+  /* } */
+}
+.fa-bell{
+  font-size: 30px;
+  /* padding-top: 5px; */
+}
+.bell-notification::after{
+    content: attr(current-count);
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border: 2px solid white;
+}
